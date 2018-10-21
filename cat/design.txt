@@ -1,0 +1,36 @@
+mytail.c
+input: Set of files
+output: The last 10 lines of each of the files to standard output
+ex: mytail file1 file2 file3 -> standard output (might be in binary)
+
+Hints:
+Most code will be for handling errors.
+
+Restrictions:
+You have to use "open(), close(), read(), and write() system calls (see the man pages for them) as well as perror()".
+You may not use C library calls such as fread(), printf(), and getchar().
+However, other than opening, closing, reading, and writing the file and standard input, you may use C library calls.
+
+
+open(name, how) -> call opens the file specified by pathname
+close(fd) -> closes a file descriptor, so that it no longer refers to any file and may be resued
+read(fd, buffer, size) -> attempts to read up to 'count' bytes from file descriptor fd int the buffer starting at buf
+write(fd, buffer, size) -> writes up to 'count' bytes from the buffer starting at buf to the file referred to by the file descripter fd
+perror() -> produces a message on standard error describing the last error encountered during a call to a system or library function
+
+pseudocode:
+
+main
+    if not enough arguments (< 2)
+        error
+    else
+        for iterate through files (i < argc)
+            open() file
+            if open()
+                while read() file
+                    count lines
+                    find n-10th line
+                        write until nth line
+            else
+                error
+            close() file
