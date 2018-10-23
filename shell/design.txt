@@ -1,0 +1,60 @@
+argshell.c
+
+GOAL:
+Implement simple FreeBSD shell program
+(a program to run other programs)
+
+HINTS:
+- Sanitize user input (lowercase ascii/delete extra characters...)
+ps: shows processes
+top: everything currently running
+fork(): create a child processes
+
+RESTRICTIONS:
+
+SUPPORTED FEATURES:
+    1. exit (internal exit command)
+        Library calls: exit()
+    2. ls (command with no arguments)
+        System calls: fork(), execvp(), wait()
+    3. ls -l foo (command with one or more arguments)
+        System calls: fork(), execvp(), wait()
+    4. sort -nr < scores (command, with or without arguments whose input is redirected from a file)
+        System calls: open(), close(), dup()
+    5. ls -l > file (command, with or without arguments, whose output is redirected to a file)
+        System calls: open(), close(), dup()
+    6. ls -l | less (command, with or without arguments, whose output is piped to the input of another command)
+        System calls: pipe(), close(), dup()
+    7. ls -l >& foo (Redirection of standard error)
+        System calls: pipe(), open(), close(), dup()
+    8. cd /home/elm/cmps111 ; sort -nr < grades ; ls -l > foo (two or more command sequences, possibly involving I/O redirection, separated by a semicolon)
+        System calls: wait()
+    9. cd /usr (internal shell command cd)
+        System / library calls: chdir(), getcwd()
+
+PSEUDOCODE:
+
+main
+    inf loop
+    fork()
+    if (no arg)
+        continue
+    if (exit)
+        exit(0)
+    if (cd)
+        chdir()
+    if (in child)
+        check special characters
+            subarray until special character
+        execvp
+    else (in parent)
+        wait
+    break
+
+
+int Dog
+Dog = fork()
+if (Dog = 0)
+    execvp
+else
+    waitpid(0, status)

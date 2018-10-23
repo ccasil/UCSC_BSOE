@@ -1,0 +1,48 @@
+Cesar Kyle Casil
+1324410
+
+Pipe:
+    Attempted, however execvp(), is still taking special characters as arguments
+    calls execvp() a second time and doesn't detect arguments (No such file or directory)
+        First output is correct
+        Remaining errors are bugs
+
+    MULTIPLE PIPING SEEMS TO WORK
+
+---------Included Files:
+README
+Makefile
+design.txt
+argshell.c
+shell.l
+
+---------Compile:
+To build argshell:
+make
+
+---------Run:
+To run argshell:
+./argshell
+
+---------Clean:
+To clean argshell:
+make clean
+
+---------Test:
+exit
+ls
+ls -l foo
+sort -nr < scores
+
+ls -l > file 
+ls -l >> file
+
+ls -l | less
+
+ls -l >& foo
+ls -l >> & fools -l |& wc
+
+cd /home/elm/cmps111 ; sort -nr < grades ; ls -l > foo
+
+cd /usr
+cd
