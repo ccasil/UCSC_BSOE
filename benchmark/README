@@ -1,0 +1,9 @@
+---------Test:
+./avg.sh [workload]   ---> makes and cleans benchmark
+
+workload = ["io", "cpu", "split"]
+test using io as input test 80/20 workload io/cpu ($ ./avg.sh io)
+test using cpu as input test 80/20 workload cpu/io ($ ./avg.sh cpu)
+test using split as input test 50/50 workload cpu/io ($ ./avg.sh split)
+
+Runs 5 iterations and gathers 10 samples from Benchmark to average from
