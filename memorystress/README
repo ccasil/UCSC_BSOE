@@ -1,0 +1,46 @@
+-------Included Files:
+README
+memorystress.c
+track_sysctl.sh
+stats.txt
+
+-------Make memorystress:
+cc -o memorystress memorystress.c
+
+------Benchmark:
+While running ./track_sysctl.sh test.log
+Run ./memorystress {memory size}{accesses}{skew level}
+    in a seperate terminal in windows
+
+End track_sysctl.sh shell script when memorystress is done running
+View test.log for test results
+
+====== Data fomat in stats.txt =======
+vm.vmtotal:
+.
+.
+.
+vm.stats.v_queued_for_flush:
+vm.stats.v_inactive_to_free_count:
+vm.stats.v_inactive_to_laundry_count:
+vm.stats.v_inactive_to_active_count:
+vm.stats.v_inactive_scans:
+vm.stats.v_active_to_laundry_count:
+vm.stats.v_active_to_inactive_count:
+vm.stats.v_active_scans:
+vm.stats.vm.v_cache_count:
+vm.stats.vm.v_laundry_count:
+vm.stats.vm.v_inactive_count:
+vm.stats.vm.v_active_count:
+vm.stats.vm.v_wire_count:
+vm.stats.vm.v_free_count:
+.
+.
+.
+.
+.
+.
+.
+.
+vm.md_malloc_wait
+-------------------------------------
