@@ -27,7 +27,7 @@ SUPPORTED FEATURES:
         System calls: pipe(), close(), dup()
     7. ls -l >& foo (Redirection of standard error)
         System calls: pipe(), open(), close(), dup()
-    8. cd /home/elm/cmps111 ; sort -nr < grades ; ls -l > foo (two or more command sequences, possibly involving I/O redirection, separated by a semicolon)
+    8. cd /home/elm/ ; sort -nr < grades ; ls -l > foo (two or more command sequences, possibly involving I/O redirection, separated by a semicolon)
         System calls: wait()
     9. cd /usr (internal shell command cd)
         System / library calls: chdir(), getcwd()

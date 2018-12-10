@@ -39,7 +39,7 @@ ls -l | less
 ls -l >& foo
 ls -l >> & fools -l |& wc
 
-cd /home/elm/cmps111 ; sort -nr < grades ; ls -l > foo
+cd /home/elm/ ; sort -nr < grades ; ls -l > foo
 
 cd /usr
 cd
