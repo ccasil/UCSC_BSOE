@@ -10,6 +10,7 @@ CMPS121: Mobile Applications
 -CMPS122: Computer Security (winter 2019)
 -CMPS130: Computational Models (fall 2018)
 -CMPS165: Data Programming for Visualization (spring 2016)
+-CMPS180: Database Systems (winter 2019)
 CMPS183: Web Applications
 
 CMPE3: Personal Computer Concepts: Software and Hardware

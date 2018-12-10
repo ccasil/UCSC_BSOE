@@ -1,0 +1,41 @@
+- When we mkdir, sometimes we override a available directory with a new one
+- Ran into problems compiling FileBench
+	- Fixed errors by including #include <sys/socket.h>
+		- Ran into more problems
+- Attempted to use Fio to benchmark Input Output Operations
+	- Couldn't figure out how to run on mounted file system rather than system itself
+- diskinfo -c
+	-c triggers simple measurement of the I/O read command overhead
+
+---------Included Files:
+README
+design.pdf
+fuse_fat.h
+fuse_fat.c
+Makefile
+make_with_vars.sh
+
+---------Make Filesystem:
+./make_with_vars fuse_fat [block size]
+clang -Wall fuse.c `pkg-config fuse --cflags --libs` -o fuse
+
+---------How to Mount:
+1. Create a directory to be use as a mountpoint
+2. ./make_with_vars fuse_fat
+3. ./fuse_fat -d [mount point]
+4. Open a second terminal to use file system while debugging
+
+Using the option -f will let you see the debug messages which are printed using printf
+
+---------How to Unmount:
+umount [mountpoint]
+
+---------How to Clean:
+make clean
+rm -f fat_fuse
+
+---------How to Test:
+Case1 (512B):
+	./make_with_vars fuse_fat 512
+Case2 (8KB):
+	./make_with_vars fuse_fat 8192
