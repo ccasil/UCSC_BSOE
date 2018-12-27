@@ -28,6 +28,6 @@ PHYS5C/5N: Introduction to Physics III
 Math4C: Linear Algebra @ Mission (Math21: Linear Algebra / AMS10: Mathematical Methods for Engineers I)
 
 MATH 3: Precalculus
-MATH19A: Calculus for Science, Engineering and Mathematics
+MATH19A: Calculus for Science, Engineering, and Mathematics
 MATH19B: Calculus for Science, Engineering, and Mathematics
 MATH23A: Vector Calculus
