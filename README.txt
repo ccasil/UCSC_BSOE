@@ -26,7 +26,7 @@ PHYS:           PHYSICS
 PHYS5A/5L:      Introduction to Physics I (Mechanics)
 PHYS5C/5N:      Introduction to Physics III (Electricity and Magnetism)
 
-AMS:            APPLIED MATHEMATICS 7 STATISTICS
+AMS:            APPLIED MATHEMATICS & STATISTICS
 -AMS131:        Introduction to Probability Theory (winter 2019)
 
 MATH:           MATHEMATICS
